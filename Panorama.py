@@ -65,8 +65,8 @@ def warp_image(image, homography, output_size):
     return output_image
 
 # prepare images
-image1 = cv2.imread('image1.jpg')
-image2 = cv2.imread('image2.jpg')
+image1 = cv2.imread('image3.jpg')
+image2 = cv2.imread('image4.jpg')
 gray1 = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
 gray2 = cv2.cvtColor(image2, cv2.COLOR_BGR2GRAY)
 
@@ -95,7 +95,7 @@ warp_image2 = warp_image(image2, homography, output_size)
 warp_image2[0:image1.shape[0], 0:image1.shape[1]] = image1
 
 # Save the panorama image
-cv2.imwrite("result_12.jpg", warp_image2)
+cv2.imwrite("result_34.jpg", warp_image2)
 
 # Display the panorama image
 # cv2.imshow("Panorama", warp_image2)
